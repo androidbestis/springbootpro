@@ -1,0 +1,9 @@
+com\adonai\config\AdonaiProperties.class
+com\adonai\SpringBootWebProjectApplciation.class
+com\adonai\config\WebConfiguration.class
+com\adonai\entity\UserInfo.class
+com\adonai\config\WebConfiguration$MyFilter.class
+com\adonai\entity\UserInfoRepository.class
+com\adonai\entity\User.class
+com\adonai\controller\TestFilterController.class
+com\adonai\controller\TestThymeleafController.class

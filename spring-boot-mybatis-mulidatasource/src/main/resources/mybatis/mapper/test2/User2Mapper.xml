@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.adonai.mapper.test2.User2Mapper" >
+
+    <resultMap id="BaseResultMap" type="com.adonai.entity.UserEntity" >
+        <id     column="id" property="id"  />
+        <result column="email" property="email"/>
+        <result column="nick_name" property="nick_name"/>
+        <result column="pass_word" property="pass_word"/>
+        <result column="reg_time" property="reg_time" />
+        <result column="user_name" property="user_name" />
+    </resultMap>
+
+
+    <sql id="Base_Column_List" >
+        id, email, nick_name, pass_word, reg_time,user_name
+    </sql>
+
+    <select id="getAll" resultMap="BaseResultMap"  >
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM userinfo
+    </select>
+
+    <select id="getOne" parameterType="java.lang.Long" resultMap="BaseResultMap" >
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM userinfo
+        WHERE id = #{id}
+    </select>
+
+    <insert id="insert" parameterType="com.adonai.entity.UserEntity" >
+        INSERT INTO
+        userinfo
+        ( id, email, nick_name, pass_word, reg_time,user_name)
+        VALUES
+        (#{id}, #{email}, #{nick_name},#{pass_word},#{reg_time},#{user_name})
+    </insert>
+
+    <update id="update" parameterType="com.adonai.entity.UserEntity" >
+        UPDATE
+        userinfo
+        SET
+        <if test="user_name != null">user_name = #{user_name},</if>
+        <if test="pass_word != null">pass_word = #{pass_word},</if>
+        nick_name = #{nick_name}
+        WHERE
+        id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="java.lang.Long" >
+        DELETE FROM
+        userinfo
+        WHERE
+        id =#{id}
+    </delete>
+
+</mapper>

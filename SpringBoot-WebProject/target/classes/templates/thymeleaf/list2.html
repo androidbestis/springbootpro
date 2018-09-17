@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>用户列表</title>
+    <link href="/css/main.css" rel="stylesheet" />
+    <!--页面引入webjar vue-->
+    <link th:href="@{/webjars/bootstrap/3.3.6/dist/css/bootstrap.css}" rel="stylesheet"></link>
+</head>
+<body>
+<h1 th:text="${hello}">Hello, Spring Boot!</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>邮件</th>
+        <th>昵称</th>
+        <th>密码</th>
+        <th>注册时间</th>
+        <th>用户名</th>
+    </tr>
+    <tr th:each="user : ${userInfoList}">
+        <td th:text="${user.id}">0</td>
+        <td th:text="${user.email}">15871692767@163.com</td>
+        <td th:text="${user.nickName}">adonai</td>
+        <td th:text="${user.passWord}">12345</td>
+        <td th:text="${user.regTime}">2018-9-10</td>
+        <td th:text="${user.userName}">lixudong</td>
+    </tr>
+</table>
+
+<select>
+    <option th:each="user:${userInfoList}" th:value="${user.id}" th:text="${user.userName}">我是默认值</option>
+</select>
+
+</body>
+</html>

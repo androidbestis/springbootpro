@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.adonai</groupId>
+    <artifactId>SpringBoot-Pro</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>MockMvc-UnitTest</module>
+        <module>SpringBoot-WebProject</module>
+        <module>SpringBoot-Redis</module>
+        <module>Spring-data-jpa</module>
+        <module>SpringBoot-Mybatis</module>
+        <module>SpringBoot-Mybatis-XML-Model</module>
+        <module>spring-boot-mybatis-mulidatasource</module>
+        <module>SpringBoot-RabbitMQ</module>
+        <module>SpringBoot-TimedTask</module>
+        <module>SpringBoot-Mail</module>
+        <module>SpringBoot-MongoDB</module>
+        <module>SpringBoot-Multi-mongodb</module>
+        <module>SpringBoot-TestPackageDeploy</module>
+        <module>SpringBoot-antic</module>
+        <module>SpringBoot-Shiro</module>
+        <module>SpringBoot-Jpa-thymeleaf-curd</module>
+        <module>SpringBoot-File-Upload</module>
+        <module>SpringBoot-FastDFS</module>
+        <module>SpringBoot-actuator</module>
+        <module>SpringBoot-admin-server</module>
+        <module>SpringBoot-admin-client</module>
+        <module>SpringBoot-banner</module>
+        <module>SpringBoot-admin-clound</module>
+        <module>SpringBoot-docker</module>
+        <module>dockercompose-springboot-mysql-nginx</module>
+        <module>SpringBoot-CommandLineRunner</module>
+        <module>SpringBoot-Memcache</module>
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <!--<version>2.0.3.RELEASE</version>-->
+        <version>1.5.13.RELEASE</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>2.0.3.RELEASE</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>2.0.3.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+    </dependencies>
+
+
+</project>
